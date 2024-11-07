@@ -21,3 +21,16 @@ body{
 .tag-bg{
   background-color: rgba(48, 156, 8, 0.1);
 }
+.border-radious-bottom{
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+.border-radious-top{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+}
+.b-opacity{
+  opacity: 50%;
+}
