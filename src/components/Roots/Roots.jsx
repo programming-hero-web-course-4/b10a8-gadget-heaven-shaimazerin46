@@ -22,6 +22,7 @@ const Roots = () => {
                 
             </GadgetsContext.Provider>
             
+            
             <Footer></Footer>
            
             
