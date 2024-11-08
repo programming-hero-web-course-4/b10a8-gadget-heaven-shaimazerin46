@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const links = <>
-    <NavLink>Home</NavLink>
+    <NavLink to='/'>Home</NavLink>
     <NavLink>Statistics</NavLink>
-    <NavLink>Dashboard</NavLink>
+    <NavLink to='/dashboard'>Dashboard</NavLink>
     </>
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <div className="navbar main-color  text-white mt-5 border-radious-top">
                 <div className="navbar-start">
                     <div className="dropdown">

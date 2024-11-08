@@ -1,0 +1,205 @@
+[
+    {
+        "product_id": "101",
+        "product_title": "MacBook Air 13-inch",
+        "product_image": "https://i.ibb.co.com/zrBhPM6/photo-1660833638050-41f95d8b94e6.jpg",
+        "category": "Laptop",
+        "price": 999.99,
+        "description": "Lightweight and powerful MacBook Air with M1 chip.",
+        "specification": [
+            "Apple M1 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "Retina Display",
+            "Battery life up to 18 hours"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "102",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/MCYsRQQ/photo-1575320854760-bfffc3550640.jpg",
+        "category": "Laptop",
+        "price": 1199.99,
+        "description": "Dell XPS 13 with InfinityEdge display and 11th Gen Intel Core.",
+        "specification": [
+            "Intel Core i7-1185G7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.4-inch FHD+",
+            "Battery life up to 12 hours"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "103",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/kgtP9GL/photo-1677943774493-8813e0ef882b.jpg",
+        "category": "Laptop",
+        "price": 1299.99,
+        "description": "Business-class laptop with robust design and high performance.",
+        "specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch FHD",
+            "Battery life up to 15 hours"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "104",
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/BnmFC2y/photo-1619532550465-ad4dc9bd680a.jpg",
+        "category": "Laptop",
+        "price": 1399.99,
+        "description": "HP Spectre x360 with a stunning 2-in-1 design and performance.",
+        "specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch FHD touch display",
+            "Convertible 360° hinge"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "105",
+        "product_title": "Asus ZenBook 14",
+        "product_image": "https://i.ibb.co.com/nwD5Pqt/photo-1636211989567-fd3ada526ea0.jpg",
+        "category": "Laptop",
+        "price": 999.99,
+        "description": "Compact and stylish laptop with powerful performance.",
+        "specification": [
+            "AMD Ryzen 7",
+            "8GB RAM",
+            "512GB SSD",
+            "14-inch FHD",
+            "Battery life up to 10 hours"
+        ],
+        "availability": false,
+        "rating": 4.2
+    },
+    {
+        "product_id": "106",
+        "product_title": "Microsoft Surface Laptop 4",
+        "product_image": "https://i.ibb.co.com/sVY4Vfh/photo-1727132526999-bb14b0b99119.jpg",
+        "category": "Laptop",
+        "price": 1299.99,
+        "description": "The Surface Laptop 4 with sleek design and a responsive touchscreen.",
+        "specification": [
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD",
+            "13.5-inch PixelSense display",
+            "Windows 11 Home"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "201",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/1sydBvC/photo-1678652197831-2d180705cd2c.jpg",
+        "category": "Phone",
+        "price": 1099.99,
+        "description": "The new iPhone 14 Pro with A16 Bionic chip and 48MP camera.",
+        "specification": [
+            "A16 Bionic chip",
+            "128GB storage",
+            "6.1-inch Super Retina XDR display",
+            "48MP camera system",
+            "Face ID"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "202",
+        "product_title": "Samsung Galaxy S22",
+        "product_image": "https://i.ibb.co.com/8znVQCR/photo-1674763301530-f73a9351d9fc.jpg",
+        "category": "Phone",
+        "price": 899.99,
+        "description": "Samsung Galaxy S22 with powerful Snapdragon processor and pro-grade camera.",
+        "specification": [
+            "Snapdragon 8 Gen 1",
+            "8GB RAM",
+            "256GB storage",
+            "6.1-inch Dynamic AMOLED 2X display",
+            "50MP rear camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "203",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co.com/1dRwfpV/photo-1666238851883-1cdc90b547e4.jpg",
+        "category": "Phone",
+        "price": 599.99,
+        "description": "Google Pixel 7 with Tensor G2 processor and advanced camera features.",
+        "specification": [
+            "Google Tensor G2",
+            "8GB RAM",
+            "128GB storage",
+            "6.3-inch OLED display",
+            "50MP wide camera"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "301",
+        "product_title": "Apple Magic Mouse",
+        "product_image": "https://i.ibb.co.com/2hHWfff/photo-1631923421544-450ecd811324.jpg",
+        "category": "Accessories",
+        "price": 79.99,
+        "description": "Wireless and rechargeable, with a smooth multi-touch surface.",
+        "specification": [
+            "Multi-Touch surface",
+            "Bluetooth enabled",
+            "Rechargeable battery",
+            "Compatible with macOS"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": "302",
+        "product_title": "Sony WH-1000XM4",
+        "product_image": "https://i.ibb.co.com/ZLBhzQB/photo-1526509867162-5b0c0d1b4b33.jpg",
+        "category": "Accessories",
+        "price": 349.99,
+        "description": "Industry-leading noise-canceling headphones with superior sound quality.",
+        "specification": [
+            "Noise canceling",
+            "30-hour battery life",
+            "Touch controls",
+            "Bluetooth and NFC",
+            "Alexa voice control"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "303",
+        "product_title": "Samsung Galaxy Buds Pro",
+        "product_image": "https://i.ibb.co.com/DQVnX69/photo-1600374917838-1df876d745c7.jpg",
+        "category": "Accessories",
+        "price": 199.99,
+        "description": "Premium earbuds with active noise cancelation and great sound.",
+        "specification": [
+            "Active noise cancellation",
+            "Wireless charging",
+            "IPX7 water resistance",
+            "Bluetooth 5.0",
+            "Multiple ear tip sizes"
+        ],
+        "availability": true,
+        "rating": 4.4
+    }
+]

@@ -5,15 +5,13 @@
 
 body{
   font-family: "Sora", sans-serif;
+  background-color: #f6f6f6;
 }
 .main-color{
   background-color: #9538E2;
 }
 .text-light{
   color: rgba(9, 8, 15, 0.6);
-}
-.gray-body{
-  background-color: #D9D9D9;
 }
 .tag-color{
   color: #309C08;
@@ -31,6 +29,18 @@ body{
   border-top-left-radius: 20px;
 
 }
-.b-opacity{
-  opacity: 50%;
+.active{
+  text-decoration: underline;
+}
+.btn-active{
+  background-color: #9538E2;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 24px;
+}
+.pending{
+  /* px-4 py-2 bg-[#f6f6f6] rounded-2xl */
+  padding: 5px 15px;
+  background-color: white;
+  border-radius: 24px;
 }
