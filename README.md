@@ -1,6 +1,6 @@
 Live website link: https://gadget-heaven-zerin.netlify.app
 <br/>
-Requirement Document Link: 
+Requirement Document Link: https://docs.google.com/document/d/1PeXIxSdLtte0agD2TL3hCYSHvq5IgXl2_Sl2dtvUcOg/edit?usp=sharing 
  <br/>
 React Fundamental concepts used in the project: <br/>
     1. Props <br/>
