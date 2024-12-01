@@ -1,7 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const isHomePage = location.pathname === '/';
+
     const links = <>
     <NavLink to='/'>Home</NavLink>
     <NavLink to='/dashboard'>Dashboard</NavLink>
@@ -9,7 +13,7 @@ const Navbar = () => {
     </>
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="navbar main-color  text-white mt-5 border-radious-top">
+            <div style={{backgroundColor: isHomePage? '#9538e2':'transparent', color: isHomePage? 'white':'black'}} className="navbar mt-5 border-radious-top">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
