@@ -13,6 +13,7 @@ const ExploreButton = () => {
                 <NavLink to={`/catagory/Laptop`}  className={({isActive,isPending})=>isActive? 'btn-active' : isPending? 'pending':''}>Laptops</NavLink>
                 <NavLink to={`/catagory/Phone`}  className={({isActive,isPending})=>isActive? 'btn-active' : isPending? 'pending':''}>Phones</NavLink>
                 <NavLink to={`/catagory/Accessories`} className={({isActive,isPending})=>isActive? 'btn-active' : isPending? 'pending':''}>Accessories</NavLink>
+                <NavLink to={`/catagory/Power_Supply`} className={({isActive,isPending})=>isActive? 'btn-active' : isPending? 'pending':''}>Power Supply</NavLink>
                     </ul>
                 </div>
         </div>

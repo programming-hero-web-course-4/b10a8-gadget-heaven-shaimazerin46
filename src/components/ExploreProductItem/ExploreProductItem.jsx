@@ -1,26 +1,39 @@
-import React, { useContext, useEffect, useState } from 'react';
-import {GadgetsContext} from '../Roots/Roots'
+import React, {useEffect, useState } from 'react';
 import Gadget from '../Gadget/Gadget';
 import { useParams } from 'react-router-dom';
 
 
 const ExploreProductItem = () => {
     const {catagory} = useParams();
-    const {data} = useContext(GadgetsContext)
+    const [data,setData] = useState([])
+    useEffect(()=>{
+        fetch('/public/data.json')
+        .then(res=>res.json())
+        .then(data=>setData(data))
+    },[])
 
   
    const [catagoryData,setCatagoryData] = useState([])
    useEffect(()=>{
    if(Array.isArray(data)){
     if(catagory){
-        const filterData = data?.filter(d=>d.category===catagory)
-        setCatagoryData(filterData)}
-    else{
+        
+            const filterData = data?.filter(d=>d.category===catagory)
+            
+            if(filterData){
+            setCatagoryData(filterData)};
+            }
+            
+     else{
             setCatagoryData(data)
         }
    }
         
 },[data,catagory])
+
+if(catagoryData.length===0){
+    return <div className='text-3xl text-red-400 mx-auto mt-20'>No data found for this category.</div>;
+}
     
    
   

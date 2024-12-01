@@ -2,9 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './components/Home/Home'
-import Dashboard from './components/Dashboard/Dashboard'
-import Roots from './components/Roots/Roots'
+import Home from './Layout/Home'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import ExploreProductItem from './components/ExploreProductItem/ExploreProductItem'
+import ProductDetails from './components/ProductDetails/ProductDetails'
 
 
 
@@ -14,27 +15,22 @@ import Roots from './components/Roots/Roots'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Roots></Roots>,
-    loader: ()=> fetch('data.json'),
+    element: <Home></Home>,
     children: [
       {
         path: '/',
-        element: <Home></Home>,
-
+        element: <ExploreProductItem></ExploreProductItem>
       },
-      
       {
-        path: 'dashboard',
-        element: <Dashboard></Dashboard>
-      }, 
-      {
-        path: 'catagory/:catagory',
-        element: <Home></Home>
-        
+        path: '/catagory/:catagory',
+        element: <ExploreProductItem></ExploreProductItem>
       }
-      
     ]
   },
+  {
+    path: '/details/:itemId',
+    element: <ProductDetails></ProductDetails>
+  }
   
   
   
@@ -45,6 +41,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+      <HelmetProvider >
+         <RouterProvider router={router} />
+      </HelmetProvider>
   </StrictMode>,
 )
