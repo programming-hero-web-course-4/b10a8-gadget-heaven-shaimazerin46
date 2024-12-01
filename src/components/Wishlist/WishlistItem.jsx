@@ -1,15 +1,18 @@
 import { useContext } from "react";
 import { GadgetContext } from "../../Context/Context";
-
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 const WishlistItem = ({item}) => {
     const {addTocart} = useContext(GadgetContext)
     const {product_image,product_title,description,price,product_id} = item
     const handleCart = () =>{
         addTocart(product_id)
+        toast.success('Successfully added to cart!')
     }
     return (
         <div>
+            <ToastContainer position="top-center"/>
               <div className="flex mb-10 gap-5">
                 <div>
                     <img src={product_image} alt="" className="h-[192px] w-[274px] object-cover rounded-xl"/>

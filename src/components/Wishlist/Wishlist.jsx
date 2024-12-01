@@ -3,6 +3,7 @@ import WishlistItem from "./WishlistItem";
 import { GadgetContext } from "../../Context/Context";
 
 
+
 const Wishlist = () => {
     const {wishlist} = useContext(GadgetContext);
     const [data,setData] = useState([])
