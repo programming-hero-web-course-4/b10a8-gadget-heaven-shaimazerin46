@@ -6,6 +6,10 @@ import Home from './Layout/Home'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ExploreProductItem from './components/ExploreProductItem/ExploreProductItem'
 import ProductDetails from './components/ProductDetails/ProductDetails'
+import Context, { GadgetContext } from './Context/Context'
+import Cart from './components/Cart/Cart'
+import Dashboard from './Layout/Dashboard/Dashboard'
+import Wishlist from './components/Wishlist/Wishlist'
 
 
 
@@ -30,6 +34,24 @@ const router = createBrowserRouter([
   {
     path: '/details/:itemId',
     element: <ProductDetails></ProductDetails>
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: '/dashboard',
+        element: <Cart></Cart>
+      },
+      {
+        path: '/dashboard/cart',
+        element: <Cart></Cart>
+      },
+      {
+        path: '/dashboard/wishlist',
+        element: <Wishlist></Wishlist>
+      }
+    ]
   }
   
   
@@ -41,8 +63,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <HelmetProvider >
+     <Context>
+     <HelmetProvider >
          <RouterProvider router={router} />
       </HelmetProvider>
+     </Context>
   </StrictMode>,
 )

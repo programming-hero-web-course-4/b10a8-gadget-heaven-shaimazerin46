@@ -1,14 +1,16 @@
-import { React, useEffect, useState } from 'react';
+import { React, useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
+import { GadgetContext } from '../../Context/Context';
 
 const ProductDetails = () => {
     const { itemId } = useParams();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [item, setItem] = useState(null);
+    const {setLoading,addToWishlist,addTocart} = useContext(GadgetContext);
+    
 
     useEffect(() => {
         fetch('/data.json')
@@ -17,6 +19,7 @@ const ProductDetails = () => {
                 setData(data);
                 const matchedItem = data.find(d => d.product_id === itemId);
                 setItem(matchedItem);
+               
                 setLoading(false);
             })
             .catch(error => {
@@ -25,17 +28,18 @@ const ProductDetails = () => {
             });
     }, [itemId]);
 
-    if (loading) {
-        return <p>Loading product details</p>;
-    }
 
     if (!item) {
         return <p>Product not found.</p>;
     }
 
     const { price, product_title, product_image, description, specification, rating, availability } = item;
-
-
+    const handleAddtoWishlist = ()=>{
+        addToWishlist(itemId)
+    }
+    const handleAddToCart=()=>{
+        addTocart(itemId)
+    }
     return (
         <div>
        <Navbar></Navbar>
@@ -77,25 +81,25 @@ const ProductDetails = () => {
                             {specification.map((s,idx)=><li key={idx}>{s}</li>)}
                         </ul>
                         <span className='text-yellow-600 mb-8'>
-                           <span className='text-black font-semibold '> Rating <span className='text-yellow-600'> <i class="fa-solid fa-star"></i></span></span>
+                           <span className='text-black font-semibold '> Rating <span className='text-yellow-600'> <i className="fa-solid fa-star"></i></span></span>
 
-                           <div className='mb-3 mt-3'>  <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                           <div className='mb-3 mt-3'>  <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
                             <span className='text-black text-sm p-2 bg-slate-200 ml-3 rounded-full'>{rating}</span></div>
                         </span>
 
                         <div className='flex gap-5'>
-                            <button className='py-2 px-4 main-color text-white flex gap-3 rounded-2xl'><span>
+                            <button onClick={handleAddToCart} className='py-2 px-4 main-color text-white flex gap-3 rounded-2xl'><span>
                             Add to Cart
                             </span>
                             <span className='flex py-1'>
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i className="fa-solid fa-cart-shopping"></i>
                             </span>
                            
                             </button>
-                            <button className="p-2 rounded-full bg-white border-2">
+                            <button onClick={handleAddtoWishlist} className="p-2 rounded-full bg-white border-2">
                         <img src="https://img.icons8.com/?size=50&id=87&format=png" alt="" className="w-5"/>
                     </button>
                         </div>

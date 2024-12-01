@@ -4,10 +4,12 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import ExploreButton from "../components/ElploreButton/ExploreButton";
 import { Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { GadgetContext } from "../Context/Context";
 
 
 const Home = () => {
-
+   
 
     return (
         <div className="max-w-7xl mx-auto">
