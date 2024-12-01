@@ -20,6 +20,7 @@ const Wishlist = () => {
    
     return (
         <div className="mt-10">
+            <h2 className="mb-10 text-xl font-bold">Wishlist</h2>
           
           {matchedItem.map((item,idx)=><WishlistItem key={idx} item={item}></WishlistItem>)}
 

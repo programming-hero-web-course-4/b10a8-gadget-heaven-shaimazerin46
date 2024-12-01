@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     const links = <>
     <NavLink to='/'>Home</NavLink>
-    <NavLink>Statistics</NavLink>
     <NavLink to='/dashboard'>Dashboard</NavLink>
+    <NavLink to='/track'>Track your order</NavLink>
     </>
     return (
         <div className="max-w-7xl mx-auto">

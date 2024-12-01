@@ -10,6 +10,8 @@ import Context, { GadgetContext } from './Context/Context'
 import Cart from './components/Cart/Cart'
 import Dashboard from './Layout/Dashboard/Dashboard'
 import Wishlist from './components/Wishlist/Wishlist'
+import Tracking from './Layout/Tracking'
+import ErrorPage from './components/ErrorPage'
 
 
 
@@ -52,6 +54,13 @@ const router = createBrowserRouter([
         element: <Wishlist></Wishlist>
       }
     ]
+  },
+  {
+    path: '/track',
+    element: <Tracking></Tracking>
+  },{
+    path: '*',
+    element: <ErrorPage></ErrorPage>
   }
   
   

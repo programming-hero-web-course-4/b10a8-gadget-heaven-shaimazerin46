@@ -11,7 +11,7 @@ const CartItem = ({item}) => {
                     <h2 className="text-xl font-bold">{product_title}</h2>
                     <p><span className="font-bold">Description: </span><span className="text-[#636364] text-sm">{description}</span></p>
                     <p><span className="font-bold">Price: </span><span className="text-[#636364] text-sm">${price}</span></p>
-                    <button className='btn py-1 px-10 bg-[#9538e2] text-white rounded-3xl'>Add to cart</button>
+                   
                 </div>
             </div>
         </div>
