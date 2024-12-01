@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 import { GadgetContext } from '../../Context/Context';
 
 const ProductDetails = () => {
@@ -35,13 +37,16 @@ const ProductDetails = () => {
 
     const { price, product_title, product_image, description, specification, rating, availability } = item;
     const handleAddtoWishlist = ()=>{
-        addToWishlist(itemId)
+        addToWishlist(itemId);
+        toast.success('Successfully added to wishlist!')
     }
     const handleAddToCart=()=>{
         addTocart(itemId)
+        toast.success('Successfully added to cart!')
     }
     return (
         <div>
+        <ToastContainer position="top-center" />
        <Navbar></Navbar>
        <section>
          
